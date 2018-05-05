@@ -30,7 +30,7 @@ frequency.method()
     destination = $("#destination").val().trim();
     frequency = $("#frequency").val().trim();
     // time = $("#").val().trim();
-    rate = $("#mrate").val().trim();
+    nextArrival = $("").val().trim();
 
     database.ref().push({
         trainName: trainName,
@@ -58,7 +58,7 @@ database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", functi
     var freqSnap = snap.val().frequency;
     var timeSnap = snap.val().firstTime;
 
-    $("#blorp").prepend("<tr><td>" +nameSnap+ "</td><td>" +destSnap+ "</td><td>" +freqSnap+ "</td><td>" +rateSnap+ "</td><td>" );
+    $("#blorp").prepend("<tr><td>" +nameSnap+ "</td><td>" +destSnap+ "</td><td>" +freqSnap+ "</td><td>" +timeSnap+ "</td><td>" );
 
 
 
